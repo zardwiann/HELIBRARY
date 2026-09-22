@@ -1,12 +1,12 @@
 
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import ParticlesComponent from './particles';
+ 
 import Banner from './Page1/banner';
 import NavigationBar from './Page1/Navigationbar';
 import About from './Page1/aboutus';
 import LibraryCategory from './Page2/LibraryNavigationBar';
 import Technology from './Page2/Technology';
-import OnlineClass from './Page2/onlineclass';
+ 
 import LandingPageCategory from './Page2/Libraylanding';
 import LoginPage from './LogIn/loginpage';
 import IntroductionToComputing from './Page2/IntroductionToComputing';
