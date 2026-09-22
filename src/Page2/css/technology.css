@@ -1,0 +1,452 @@
+ 
+:root {
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --success-gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --card-hover-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    --glass-bg: rgba(255, 255, 255, 0.15);
+    --glass-border: rgba(255, 255, 255, 0.2);
+}
+ 
+.ebook-section {
+    position: relative;
+    overflow: hidden;
+   
+}
+
+.ebook-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    animation: float 20s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    33% {
+        transform: translate(-30px, -30px) rotate(1deg);
+    }
+
+    66% {
+        transform: translate(30px, -30px) rotate(-1deg);
+    }
+}
+ 
+.ebook-section .container {
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.95) 0%,
+            rgba(255, 255, 255, 0.85) 100%);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.ebook-section .container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: var(--success-gradient);
+    animation: shimmer 3s ease-in-out infinite;
+    z-index: 2;
+}
+
+@keyframes shimmer {
+    0% {
+        left: -100%;
+    }
+
+    50% {
+        left: 100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+ 
+.ebook-section h1 {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+    z-index: 3;
+}
+
+.ebook-section h1::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+ 
+    border-radius: 2px;
+}
+
+ 
+.ebook-section hr {
+    border: none;
+    height: 2px;
+    background: var(--success-gradient);
+    border-radius: 1px;
+    margin: 1.5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.ebook-section hr::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    animation: shine 2s ease-in-out infinite;
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+
+    50% {
+        left: 100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+ 
+.cardbooks {
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 20px !important;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: var(--card-shadow) !important;
+    position: relative;
+    transform-style: preserve-3d;
+     
+}
+
+.cardbooks::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--success-gradient);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.cardbooks:hover {
+    transform: translateY(-15px) rotateX(3deg);
+    box-shadow: var(--card-hover-shadow) !important;
+    border-color: rgba(102, 126, 234, 0.3) !important;
+}
+
+.cardbooks:hover::before {
+    transform: scaleX(1);
+}
+
+ 
+.cardbooks .card-img-top {
+    transition: all 0.4s ease;
+    filter: brightness(0.95);
+    border-radius: 15px 15px 0 0 !important;
+    position: relative;
+}
+
+.cardbooks:hover .card-img-top {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.cardbooks .card-img-top::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg,
+            rgba(102, 126, 234, 0.1) 0%,
+            rgba(118, 75, 162, 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 15px 15px 0 0;
+}
+
+.cardbooks:hover .card-img-top::after {
+    opacity: 1;
+}
+
+ 
+.cardbooks .text-warning {
+    display: flex;
+    gap: 2px;
+    font-size: 0.9rem !important;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.cardbooks .text-warning::before {
+    content: attr(data-rating);
+    position: absolute;
+    left: 0;
+    color: #ffc107;
+    overflow: hidden;
+    white-space: nowrap;
+    text-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+}
+
+.cardbooks:hover .text-warning {
+    animation: sparkle 1s ease-in-out infinite alternate;
+}
+
+@keyframes sparkle {
+    0% {
+        text-shadow: 0 0 5px rgba(255, 193, 7, 0.3);
+    }
+
+    100% {
+        text-shadow: 0 0 15px rgba(255, 193, 7, 0.8);
+    }
+}
+
+ 
+.cardbooks .card-title {
+    font-weight: 600 !important;
+    color: #2d3748;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.cardbooks:hover .card-title {
+    color: #667eea;
+}
+
+ 
+.cardbooks .btn-success {
+    background: var(--success-gradient) !important;
+    border: none !important;
+    border-radius: 25px !important;
+    padding: 10px 20px;
+    font-weight: 600;
+    color: white !important;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.cardbooks .btn-success::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent);
+    transition: left 0.5s ease;
+}
+
+.cardbooks .btn-success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(17, 153, 142, 0.3) !important;
+    background: var(--success-gradient) !important;
+    color: white !important;
+}
+
+.cardbooks .btn-success:hover::before {
+    left: 100%;
+}
+
+.cardbooks .btn-success::after {
+    content: '→';
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.cardbooks .btn-success:hover::after {
+    transform: translateX(3px);
+}
+
+ 
+.cardbooks .card-body {
+    background: transparent;
+    position: relative;
+    z-index: 2;
+}
+
+.cardbooks .card-footer {
+    background: transparent !important;
+    border: none !important;
+    position: relative;
+    z-index: 2;
+}
+ 
+.cardbooks img[src=""] {
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0.1) 25%,
+            rgba(255, 255, 255, 0.3) 50%,
+            rgba(255, 255, 255, 0.1) 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+ 
+@media (max-width: 768px) {
+    .ebook-section h1 {
+        font-size: 2rem;
+    }
+
+    .cardbooks:hover {
+        transform: translateY(-10px) rotateX(2deg);
+    }
+}
+
+@media (max-width: 576px) {
+    .ebook-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .cardbooks {
+        border-radius: 15px !important;
+    }
+}
+
+ 
+.cardbooks {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.cardbooks:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.cardbooks:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.cardbooks:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.cardbooks:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.cardbooks:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.cardbooks:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+ 
+.cardbooks .btn-success:focus {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3) !important;
+}
+
+.cardbooks:focus-within {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}
+
+ 
+html {
+    scroll-behavior: smooth;
+}
+
+ 
+.cardbooks .card-img-top {
+    cursor: pointer;
+}
+
+.cardbooks .card-title {
+    cursor: default;
+}
+
+ 
+@media (max-width: 992px) {
+    .ebook-section .container {
+        margin: 0 10px;
+        border-radius: 15px !important;
+    }
+}
+.custom-row-10 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.custom-row-10 > .col {
+  flex: 0 0 10%;
+  max-width: 10%;
+}
+
+.bookslist{
+     border-radius: 25px;
+     
+}

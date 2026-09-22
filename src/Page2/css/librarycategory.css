@@ -1,0 +1,123 @@
+  .breadcrumb-category {
+      background: none;
+      padding: 0;
+      margin-bottom: 2rem;
+      margin-top: 100px;
+  }
+
+  .breadcrumb-category .breadcrumb-item {
+      display: flex;
+      align-items: center;
+  }
+
+  .category-breadcrumb-card {
+      background: white;
+      border: 2px solid #e9ecef;
+      border-radius: 12px;
+      padding: 1rem 1.5rem;
+      margin-right: 1rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      position: relative;
+      min-width: 200px;
+      text-decoration: none;
+      color: inherit;
+  }
+ 
+
+  .category-breadcrumb-card:hover {
+      border-color: #0d6efd;
+      box-shadow: 0 4px 15px rgba(13, 110, 253, 0.15);
+      color: inherit;
+      text-decoration: none;
+      transform: translateY(-2px);
+  }
+
+  .category-breadcrumb-card.active {
+      background: linear-gradient(135deg, #0d6efd 0%, #0d6efd 100%);
+      border-color: #0d6efd;
+      color: white;
+  }
+
+  .category-breadcrumb-card.active .text-muted {
+      color: rgba(255, 255, 255, 0.8) !important;
+  }
+
+  .category-icon {
+      font-size: 1.5rem;
+      margin-right: 0.75rem;
+  }
+
+  .category-info h6 {
+      margin: 0;
+      font-weight: 600;
+      font-size: 0.95rem;
+  }
+
+  .category-count {
+      font-size: 0.8rem;
+      margin: 0;
+  }
+
+  .breadcrumb-arrow {
+      color: #6c757d;
+      font-size: 1.2rem;
+      margin: 0 0.5rem;
+  }
+
+  .breadcrumb-container {
+      overflow-x: auto;
+      padding-bottom: 1rem;
+      margin-top: 100px;
+  }
+
+  .breadcrumb-container::-webkit-scrollbar {
+      height: 4px;
+  }
+
+  .breadcrumb-container::-webkit-scrollbar-track {
+      background: #f1f1f1;
+  }
+
+  .breadcrumb-container::-webkit-scrollbar-thumb {
+      background: #c1c1c1;
+      border-radius: 2px;
+  }
+
+  .step-indicator {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: #28a745;
+      color: white;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      font-size: 0.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+  }
+
+  .category-path {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 2rem;
+  }
+
+  @media (max-width: 768px) {
+      .category-breadcrumb-card {
+          min-width: 160px;
+          padding: 0.75rem 1rem;
+      }
+
+      .category-info h6 {
+          font-size: 0.85rem;
+      }
+
+      .category-count {
+          font-size: 0.75rem;
+      }
+  }

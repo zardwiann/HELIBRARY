@@ -1,0 +1,206 @@
+ 
+
+.category-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-wrapper {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0 30px;
+}
+
+.categories-track {
+    display: flex;
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+ 
+
+.category-slide {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 0 12px;
+    box-sizing: border-box;
+}
+
+ 
+.category-slide > * {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+}
+ 
+
+.category-slide .hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.category-slide .book-mockup {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.category-slide .book-cover {
+    min-height: 0;
+    height: auto;
+}
+
+ 
+
+.carousel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 10px;
+    padding-bottom: 30px;
+}
+
+.carousel-btn {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: #198754;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background: #146c43;
+    transform: scale(1.08);
+}
+
+/* ================================
+   INDICATORS
+================================ */
+
+.carousel-indicators {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.indicator {
+    width: 9px;
+    height: 9px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: #adb5bd;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    width: 25px;
+    border-radius: 10px;
+    background: #198754;
+}
+
+/* ================================
+   LARGE TABLET
+   3 CARDS
+================================ */
+
+@media (max-width: 1200px) {
+    .category-slide {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+
+    .category-slide > * {
+        max-width: 300px;
+    }
+}
+
+/* ================================
+   TABLET
+   2 CARDS
+================================ */
+
+@media (max-width: 768px) {
+    .category-slide {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0 10px;
+    }
+
+    .category-slide > * {
+        max-width: 300px;
+    }
+
+    .carousel-controls {
+        gap: 18px;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* ================================
+   MOBILE
+   1 CARD
+================================ */
+
+@media (max-width: 576px) {
+    .category-slide {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .category-slide > * {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .carousel-wrapper {
+        padding: 15px 0 20px;
+    }
+
+    .carousel-controls {
+        gap: 15px;
+        padding-bottom: 20px;
+    }
+
+    .carousel-btn {
+        width: 38px;
+        height: 38px;
+    }
+
+    .indicator {
+        width: 8px;
+        height: 8px;
+    }
+
+    .indicator.active {
+        width: 20px;
+    }
+}
+ 
+
+@media (max-width: 400px) {
+    .category-slide {
+        padding: 0 15px;
+    }
+
+    .category-slide > * {
+        max-width: 280px;
+    }
+}
+ 
