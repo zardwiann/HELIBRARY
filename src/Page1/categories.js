@@ -6,7 +6,7 @@ import categoriesData from '../data/catergoriesdata';
 
 const Categories = () => {
     const [filter, setFilter] = useState('all');
- 
+    const [search, setSearch] = useState('');
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const visibleCards = 4;
