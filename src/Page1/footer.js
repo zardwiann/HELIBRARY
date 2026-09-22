@@ -14,7 +14,7 @@ export default function Footer() {
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-md-6">
-                            <p>&copy; 2024 @ JENTRA E- Library.|| Developer : JO ANN GA-AS</p>
+                            <p>&copy;  E- Library.|| Developer : JO ANN GA-AS</p>
                         </div>
                         <div class="col-md-6 text-md-end">
                           
