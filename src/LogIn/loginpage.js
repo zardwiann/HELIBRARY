@@ -1,6 +1,6 @@
 
 import React from "react"
-import bg from '../THUMBNAIL/loginbg.jpeg'
+ 
 import '../LogIn/loginpage.css'
 export default function LoginPage() {
     return (

@@ -5,7 +5,7 @@ import '../Page2/css/technology.css'
 import technologylisttopic from '../data/technologylistnavigation';
 
 export default function Technology() {
-    const [filteredBooks, setFilteredBooks] = useState([]);
+    
 
     const [searchTerm, setSearchTerm] = useState("");
     const [selectedType, setSelectedType] = useState("");

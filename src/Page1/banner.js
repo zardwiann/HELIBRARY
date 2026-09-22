@@ -44,7 +44,7 @@ function Banner() {
                                         <i class="fas fa-rocket"></i>
                                         Browse Library
                                     </Link>
-                                    <a href="#" class="btn-secondary-custom">
+                                    <a href="/library" class="btn-secondary-custom">
                                         <i class="fas fa-play"></i>
                                         Start Reading
                                     </a>
